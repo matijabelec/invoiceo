@@ -1,0 +1,28 @@
+{
+  "records": [
+    {
+      "id": 63,
+      "code": "inv-65"
+    },
+    {
+      "id": 67,
+      "code": "inv-68"
+    },
+    {
+      "id": 68,
+      "code": "inv-69"
+    },
+    {
+      "id": 71,
+      "code": "inv-87"
+    },
+    {
+      "id": 83,
+      "code": "inv-89"
+    }
+  ],
+  "pagination": {
+    "records_n": 5,
+    "records_n_all": 14
+  }
+}

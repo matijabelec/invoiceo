@@ -1,0 +1,28 @@
+{
+  "records": [
+    {
+      "id": 1,
+      "code": "inv-1"
+    },
+    {
+      "id": 4,
+      "code": "inv-2"
+    },
+    {
+      "id": 5,
+      "code": "inv-4"
+    },
+    {
+      "id": 7,
+      "code": "inv-5"
+    },
+    {
+      "id": 8,
+      "code": "inv-8"
+    }
+  ],
+  "pagination": {
+    "records_n": 5,
+    "records_n_all": 14
+  }
+}

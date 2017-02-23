@@ -1,0 +1,24 @@
+<div>
+  <h1>Sales</h1>
+
+  <div ng-controller="invoicesController" ng-cloak>
+
+    <div>
+      <md-button ng-click="prevPage()" ng-disabled="page<2" class="md-raised">&lt;</md-button>
+      <md-button ng-click="reloadPage()" class="md-raised">Page {{ page }}</md-button>
+      <md-button ng-click="nextPage()" class="md-raised">&gt;</md-button>
+    </div>
+
+    <md-list>
+      <md-list-item class="md-2-line" ng-repeat="invoice in invoices">
+        <md-checkbox ng-model="item.done"></md-checkbox>
+        <div class="md-list-item-text">
+          <h3>{{ invoice.code }}</h3>
+          <p>{{ invoice.code }}</p>
+        </div>
+      </md-list-item>
+    </md-list>
+
+    <md-button class="md-primary md-raised" ng-click="showConfirm($event)"  flex="100"  flex-gt-md="auto">Confirm</md-button>
+  </div>
+</div>
