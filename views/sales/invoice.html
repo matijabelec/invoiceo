@@ -1,20 +1,14 @@
 <div>
-  <md-button ng-href="#invoices" class="md-raised">Back</md-button>
-
-  <h1>Invoice details</h1>
-
-  <div ng-controller="invoiceController" ng-cloak>
-    <div>
-      <md-button ng-click="prevRecord()" ng-disabled="page<2" class="md-raised">&lt;</md-button>
-      <md-button ng-click="reloadRecord()" class="md-raised">Invoice {{ invoice.id }}</md-button>
-      <md-button ng-click="nextRecord()" class="md-raised">&gt;</md-button>
-    </div>
-
-    <div>
-      <h3>{{ invoice.id }}</h3>
-      <p>{{ invoice.code }}</p>
-    </div>
-
-    <md-button class="md-primary md-raised" ng-click="showConfirm($event)"  flex="100"  flex-gt-md="auto">Confirm</md-button>
+  <div>
+    <md-button ng-click="prevRecord()" ng-disabled="page<2" class="md-raised">&lt;</md-button>
+    <md-button ng-click="reloadRecord()" class="md-raised">Invoice {{ invoice.id }}</md-button>
+    <md-button ng-click="nextRecord()" class="md-raised">&gt;</md-button>
   </div>
+
+  <div>
+    <h3>{{ invoice.id }}</h3>
+    <p>{{ invoice.code }}</p>
+  </div>
+
+  <md-button class="md-primary md-raised" ng-click="showConfirm($event)">Confirm</md-button>
 </div>

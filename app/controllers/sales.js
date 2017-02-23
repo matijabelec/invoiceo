@@ -1,5 +1,10 @@
-angular.module('app.controllers.sales', [])
-  .controller('invoicesController', function($scope, $http, $mdDialog){
+angular.module('app.controllers.sales', ['ngMaterial'])
+  .controller('invoicesController', function($scope, $rootScope, $http, $mdDialog){
+    $rootScope.setPage({
+      title: 'Invoices',
+      prev: false
+    });
+
     $scope.invoices = [];
     $scope.page = 1;
 
@@ -22,6 +27,23 @@ angular.module('app.controllers.sales', [])
       $scope.reloadPage($scope.page+1);
     };
 
+    $scope.reloadPage();
+  })
+  .controller('invoiceController', function($scope, $rootScope){
+    $rootScope.setPage({
+      title: 'Invoice details',
+      prev: '#invoices'
+    });
+
+    $scope.invoice = {
+      id: 1,
+      code: 'inv-demo'
+    };
+
+    $scope.prevRecord = function(){};
+    $scope.reloadRecord = function(){};
+    $scope.nextRecord = function(){};
+
     $scope.showConfirm = function(event) {
       var confirm = $mdDialog.confirm()
         .title('Are you sure to delete the record?')
@@ -38,17 +60,5 @@ angular.module('app.controllers.sales', [])
           $scope.status = 'You decided to keep your record.';
         });
     };
-
-    $scope.reloadPage();
-  })
-  .controller('invoiceController', function($scope){
-    $scope.invoice = {
-      id: 1,
-      code: 'inv-demo'
-    };
-
-    $scope.prevRecord = function(){};
-    $scope.reloadRecord = function(){};
-    $scope.nextRecord = function(){};
   })
 ;

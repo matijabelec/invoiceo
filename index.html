@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body ng-app="invoiceoApp" ng-cloak>
-    <div id="sideNavContainer" ng-controller="sideNavController as ctrl" flex layout="row" ng-cloak>
-      <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" class="md-sidenav-left">
+    <div id="sideNavContainer" ng-controller="appController as app" flex layout="row" ng-cloak>
+      <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" class="md-sidenav-left">
         <md-toolbar class="md-primary">
           <div class="md-toolbar-tools">
             <h2 flex md-truncate>Invoiceo</h2>
@@ -44,23 +44,26 @@
       <md-content layout-fill>
         <md-toolbar class="md-hue-2">
           <div class="md-toolbar-tools">
-            <md-button hide-gt-md ng-click="openLeftMenu()" aria-label="Menu" class="md-icon-button">
+            <!--<md-button hide-gt-md ng-click="openLeftMenu()" aria-label="Menu" class="md-icon-button">
               <md-icon>&#xE5D2;</md-icon>
-            </md-button>
-            <!--<md-button ng-href="#" aria-label="Back" class="md-icon-button">
+            </md-button>-->
+
+            <md-button ng-show="appSettings.prev" ng-href="{{ appSettings.prev }}" aria-label="Back" class="md-icon-button">
               <md-icon>&#xE5C4;</md-icon>
             </md-button>
 
-            <h2 flex md-truncate>Invoiceo</h2>-->
-            <span flex md-truncate></span>
+            <h2 flex md-truncate>{{ appSettings.title }}</h2>
 
             <md-button class="md-icon-button" aria-label="Favorite" ng-click="myFavorite = !myFavorite">
               <md-icon ng-show="myFavorite" style="color: greenyellow;">&#xE87D;</md-icon>
               <md-icon ng-hide="myFavorite" style="color: greenyellow;">&#xE87E;</md-icon>
             </md-button>
 
-            <md-button class="md-icon-button" aria-label="More">
+            <!--<md-button class="md-icon-button" aria-label="More">
               <md-icon>&#xE5D4;</md-icon>
+            </md-button>-->
+            <md-button hide-gt-sm ng-click="openLeftMenu()" aria-label="Menu" class="md-icon-button">
+              <md-icon>&#xE5D2;</md-icon>
             </md-button>
           </div>
         </md-toolbar>
