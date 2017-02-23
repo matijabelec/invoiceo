@@ -9,8 +9,12 @@ angular.module('invoiceoApp', ['ngMaterial', 'ngRoute', 'app.controllers'])
             templateUrl: './views/dashboard.html',
             controller: 'dashboardController'
         })
-        .when('/sales',{
-            templateUrl: './views/sales.html',
+        .when('/invoices',{
+            templateUrl: './views/sales/invoices.html',
+            controller: 'salesController'
+        })
+        .when('/invoices/:id',{
+            templateUrl: './views/sales/invoice.html',
             controller: 'salesController'
         })
         .otherwise({ redirectTo: '/' });
