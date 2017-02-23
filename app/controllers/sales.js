@@ -32,7 +32,7 @@ angular.module('app.controllers.sales', ['ngMaterial'])
   .controller('invoiceController', function($scope, $rootScope){
     $rootScope.setPage({
       title: 'Invoice details',
-      prev: '#invoices'
+      prev: '#!invoices'
     });
 
     $scope.invoice = {
