@@ -1,0 +1,24 @@
+{
+  "records": [
+    {
+      "id": 92,
+      "code": "inv-94"
+    },
+    {
+      "id": 93,
+      "code": "inv-96"
+    },
+    {
+      "id": 96,
+      "code": "inv-97"
+    },
+    {
+      "id": 97,
+      "code": "inv-98"
+    }
+  ],
+  "pagination": {
+    "records_n": 4,
+    "records_n_all": 14
+  }
+}
